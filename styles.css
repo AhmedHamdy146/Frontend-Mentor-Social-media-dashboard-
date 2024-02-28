@@ -63,6 +63,9 @@ body {
   .header {
     display: block;
   }
+  .header h1 {
+    font-size: 2.5rem;
+  }
   .header .left {
     margin-bottom: 2rem;
     padding-bottom: 2rem;
@@ -101,7 +104,7 @@ body {
 }
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  grid-template-columns: repeat(4, minmax(0rem, 1fr));
   gap: 3rem;
   margin-bottom: 5rem;
 }
@@ -187,9 +190,15 @@ h2 {
 }
 .overview {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  grid-template-columns: repeat(4, minmax(0rem, 1fr));
   gap: 3rem;
   margin-bottom: 4rem;
+}
+@media (max-width: 991px) {
+  .cards,
+  .overview {
+    grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
+  }
 }
 
 .overview .card {
